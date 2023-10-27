@@ -17,7 +17,7 @@ import notificationIcon from '../../public/images/icons/navbar-icons/notificatio
 const Navbar = () => {
 	return (
 		<div className="fixed-top">
-			<div className="flex justify-between bg-white p-1 shadow-md relative pl-3">
+			<div className="flex justify-between bg-white p-1 shadow-sm relative pl-3  z-20">
 				<div className="flex flex-row align-middle h-100 w-100">
 					<Image
 						src={facebookIcon}
