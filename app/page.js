@@ -5,8 +5,10 @@ import Homepage from './(pages)/homepage/Homepage';
 export default function Home() {
 	return (
 		<>
-			<Navbar />
-			<Homepage />
+			<div className="bg-gray-100">
+				<Navbar />
+				<Homepage />
+			</div>
 		</>
 	);
 }

@@ -1,7 +1,8 @@
 import React from 'react';
+import LeftNav from '@/app/components/LeftNav';
 
 const Home = () => {
-	return <div className="w-100"></div>;
+	return <LeftNav />;
 };
 
 export default Home;
