@@ -16,64 +16,66 @@ import notificationIcon from '../../public/images/icons/navbar-icons/notificatio
 
 const Navbar = () => {
 	return (
-		<div className="flex justify-between bg-white p-1 shadow-md relative pl-3">
-			<div className="flex flex-row align-middle h-100 w-100">
-				<Image
-					src={facebookIcon}
-					alt="facebook icon"
-					width={50}
-					height={50}
-					className=""
-				/>
-				<div className="flex justify-center my-auto gap-2 h-5/6 bg-gray-100 rounded-full">
-					<Image
-						src={searchIcon}
-						alt="search icon"
-						width={14}
-						height={14}
-						className="ml-3"
-					/>
-					<input
-						type="text"
-						placeholder="Search Fakesbook"
-						className="bg-transparent"
-					/>
-				</div>
-			</div>
-			<div className="flex my-auto gap-2 border-solid border-zinc-900 mr-3">
-				<div className="bg-gray-200 h-10 w-10 flex justify-center rounded-full">
-					<Image src={menuIcon} alt="menu icon" width={22} height={22} />
-				</div>
-				<div className="bg-gray-200 h-10 w-10 flex justify-center rounded-full">
-					<Image
-						src={messengerIcon}
-						alt="messenger icon"
-						width={22}
-						height={22}
-					/>
-				</div>
-				<div className="bg-gray-200 h-10 w-10 flex justify-center rounded-full">
-					<Image
-						src={notificationIcon}
-						alt="notification icon"
-						width={22}
-						height={22}
-					/>
-				</div>
-				<div className="bg-gray-200 h-10 w-10 flex justify-center rounded-full">
+		<div className="fixed-top">
+			<div className="flex justify-between bg-white p-1 shadow-md relative pl-3">
+				<div className="flex flex-row align-middle h-100 w-100">
 					<Image
 						src={facebookIcon}
 						alt="facebook icon"
-						width={22}
-						height={22}
+						width={50}
+						height={50}
+						className=""
 					/>
+					<div className="flex justify-center my-auto gap-2 h-5/6 bg-gray-100 rounded-full">
+						<Image
+							src={searchIcon}
+							alt="search icon"
+							width={14}
+							height={14}
+							className="ml-3"
+						/>
+						<input
+							type="text"
+							placeholder="Search Fakesbook"
+							className="bg-transparent text-sm"
+						/>
+					</div>
 				</div>
-			</div>
-			<div className="flex absolute bottom-0 left-0 right-0 top-0 m-auto justify-evenly w-2/4">
-				<Image src={homeIcon} alt="facebook icon" width={25} height={25} />
-				<Image src={videoIcon} alt="facebook icon" width={25} height={25} />
-				<Image src={marketIcon} alt="facebook icon" width={25} height={25} />
-				<Image src={gamingIcon} alt="facebook icon" width={25} height={25} />
+				<div className="flex my-auto gap-2 border-solid border-zinc-900 mr-3">
+					<div className="bg-gray-200 h-10 w-10 flex justify-center rounded-full">
+						<Image src={menuIcon} alt="menu icon" width={22} height={22} />
+					</div>
+					<div className="bg-gray-200 h-10 w-10 flex justify-center rounded-full">
+						<Image
+							src={messengerIcon}
+							alt="messenger icon"
+							width={22}
+							height={22}
+						/>
+					</div>
+					<div className="bg-gray-200 h-10 w-10 flex justify-center rounded-full">
+						<Image
+							src={notificationIcon}
+							alt="notification icon"
+							width={22}
+							height={22}
+						/>
+					</div>
+					<div className="bg-gray-200 h-10 w-10 flex justify-center rounded-full">
+						<Image
+							src={facebookIcon}
+							alt="facebook icon"
+							width={22}
+							height={22}
+						/>
+					</div>
+				</div>
+				<div className="flex absolute bottom-0 left-0 right-0 top-0 m-auto justify-evenly w-2/4">
+					<Image src={homeIcon} alt="facebook icon" width={25} height={25} />
+					<Image src={videoIcon} alt="facebook icon" width={25} height={25} />
+					<Image src={marketIcon} alt="facebook icon" width={25} height={25} />
+					<Image src={gamingIcon} alt="facebook icon" width={25} height={25} />
+				</div>
 			</div>
 		</div>
 	);

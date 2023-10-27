@@ -55,10 +55,12 @@ const LeftNav = () => {
 	];
 
 	return (
-		<div className="px-5 w-72 pt-7">
-			<ul className="flex gap-5 flex-col">
+		<div className="fixed px-2 w-72 pt-4 h-screen overflow-y-scroll scrol">
+			<ul className="flex flex-col">
 				{homeFillData.map((link, index) => (
-					<li key={index} className="flex hover:bg-gray-100 gap-3 text-sm">
+					<li
+						key={index}
+						className="flex hover:bg-gray-200 p-2.5 gap-3 text-sm font-medium">
 						<Image src={link.icon} alt={link.title} width={24} height={24} />
 						<div className="font-medium">{link.title}</div>
 					</li>
