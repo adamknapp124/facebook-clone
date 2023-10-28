@@ -12,7 +12,7 @@ import gamingIcon from '../../public/images/icons/navbar-icons/gaming-icon.svg';
 import menuIcon from '../../public/images/icons/navbar-icons/menu-icon.svg';
 import messengerIcon from '../../public/images/icons/navbar-icons/messenger-icon.svg';
 import notificationIcon from '../../public/images/icons/navbar-icons/notification-icon.svg';
-// import profileIcon from '../../public/images/icons/navbar-icons/facebook-icon.svg';
+import profileIcon from '../../public/images/icons/navbar-icons/profile-image.jpg';
 
 const Navbar = () => {
 	return (
@@ -63,10 +63,11 @@ const Navbar = () => {
 					</div>
 					<div className="bg-gray-200 h-10 w-10 flex justify-center rounded-full">
 						<Image
-							src={facebookIcon}
+							src={profileIcon}
 							alt="facebook icon"
-							width={22}
-							height={22}
+							width={100}
+							height={100}
+							className="rounded-full"
 						/>
 					</div>
 				</div>

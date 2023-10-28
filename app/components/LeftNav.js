@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import profileicon from '../../public/images/icons/sidenav-icons/friends-icon.svg';
+import profileicon from '../../public/images/icons/navbar-icons/profile-image.jpg';
 import friendsicon from '../../public/images/icons/sidenav-icons/friends-icon.svg';
 import groupsicon from '../../public/images/icons/sidenav-icons/groups-icon.svg';
 import memoriesicon from '../../public/images/icons/sidenav-icons/memories-icon.svg';
@@ -28,7 +28,6 @@ import adactivityicon from '../../public/images/icons/sidenav-icons/adactivity-i
 
 const LeftNav = () => {
 	const homeFillData = [
-		{ icon: profileicon, title: 'Profile Name' },
 		{ icon: friendsicon, title: 'Friends' },
 		{ icon: memoriesicon, title: 'Memories' },
 		{ icon: savedicon, title: 'Saved' },
@@ -57,6 +56,16 @@ const LeftNav = () => {
 	return (
 		<div className="pl-2 w-72 pt-4 h-screen hover:overflow-y-scroll scroll bg-gray-100">
 			<ul className="flex flex-col">
+				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm font-medium">
+					<Image
+						src={profileicon}
+						alt="profile image"
+						width={24}
+						height={24}
+						className="rounded-full"
+					/>
+					<div className="font-medium">Adam Knapp</div>
+				</li>
 				{homeFillData.map((link, index) => (
 					<li
 						key={index}
