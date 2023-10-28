@@ -6,9 +6,12 @@ import PostCard from '../components/PostCard';
 
 const Feed = () => {
 	return (
-		<div className="bg-slate-100 flex flex-col gap-5 p-5">
+		<div className="bg-slate-100 flex flex-col gap-5 p-5 h-screen overflow-y-auto no-scrollbar">
 			<Stories />
 			<CreatePost />
+			<PostCard />
+			<PostCard />
+			<PostCard />
 			<PostCard />
 		</div>
 	);
