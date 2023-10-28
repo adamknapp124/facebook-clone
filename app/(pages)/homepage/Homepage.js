@@ -6,11 +6,11 @@ import ContactPanel from '@/app/components/ContactPanel';
 
 const Home = () => {
 	return (
-		<section className="flex flex-row justify-around">
+		<div className="flex flex-row justify-between">
 			<LeftNav />
 			<Feed />
 			<ContactPanel />
-		</section>
+		</div>
 	);
 };
 
