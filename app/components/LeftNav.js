@@ -55,7 +55,7 @@ const LeftNav = () => {
 	];
 
 	return (
-		<div className="fixed pl-2 w-72 pt-4 h-screen hover:overflow-y-scroll scroll bg-gray-100">
+		<div className="pl-2 w-72 pt-4 h-screen hover:overflow-y-scroll scroll bg-gray-100">
 			<ul className="flex flex-col">
 				{homeFillData.map((link, index) => (
 					<li
