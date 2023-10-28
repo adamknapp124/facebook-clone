@@ -37,7 +37,7 @@ const Navbar = () => {
 						<input
 							type="text"
 							placeholder="Search Fakesbook"
-							className="bg-transparent text-sm"
+							className="bg-transparent text-sm outline-none"
 						/>
 					</div>
 				</div>
@@ -71,11 +71,29 @@ const Navbar = () => {
 						/>
 					</div>
 				</div>
-				<div className="flex absolute bottom-0 left-0 right-0 top-0 m-auto justify-evenly w-2/4">
-					<Image src={homeIcon} alt="facebook icon" width={25} height={25} />
-					<Image src={videoIcon} alt="facebook icon" width={25} height={25} />
-					<Image src={marketIcon} alt="facebook icon" width={25} height={25} />
-					<Image src={gamingIcon} alt="facebook icon" width={25} height={25} />
+				<div className="flex absolute bottom-0 left-0 right-0 top-0 m-auto justify-end h-full w-2/4">
+					<div className="border-b-2 w-[60px] mx-auto my-auto">
+						<Image src={homeIcon} alt="facebook icon" width={25} height={25} />
+					</div>
+					<div className="border-b-2 w-[60px] mx-auto my-auto">
+						<Image src={videoIcon} alt="facebook icon" width={25} height={25} />
+					</div>
+					<div className="border-b-2 w-[60px] mx-auto my-auto">
+						<Image
+							src={marketIcon}
+							alt="facebook icon"
+							width={25}
+							height={25}
+						/>
+					</div>
+					<div className="border-b-2 w-[60px] mx-auto my-auto">
+						<Image
+							src={gamingIcon}
+							alt="facebook icon"
+							width={25}
+							height={25}
+						/>
+					</div>
 				</div>
 			</div>
 		</div>

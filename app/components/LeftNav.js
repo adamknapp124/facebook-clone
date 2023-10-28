@@ -54,7 +54,7 @@ const LeftNav = () => {
 	];
 
 	return (
-		<div className="pl-2 w-72 pt-4 h-screen hover:overflow-y-scroll scroll bg-gray-100">
+		<div className="sticky pl-2 w-72 pt-4 h-screen hover:overflow-y-scroll scroll bg-gray-100">
 			<ul className="flex flex-col">
 				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm font-medium">
 					<Image

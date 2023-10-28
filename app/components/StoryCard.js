@@ -14,7 +14,7 @@ import profile4 from '../../public/images/icons/story-card-icons/profile4.jpg';
 const StoryCard = () => {
 	const storiesArray = [
 		{ background: storyImage, name: 'Emily Johnson', profileImage: profile1 },
-		{ background: storyImage2, name: 'Emily Johnson', profileImage: profile2 },
+		{ background: storyImage2, name: 'Lily Rodriguez', profileImage: profile2 },
 		{ background: storyImage3, name: 'Marcus Bennett', profileImage: profile3 },
 		{ background: storyImage4, name: 'Noah Anderson', profileImage: profile4 },
 	];
