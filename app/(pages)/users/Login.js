@@ -11,7 +11,7 @@ const Login = () => {
 			<form className="my-auto flex flex-col gap-6">
 				<div className="flex flex-col">
 					<div className="text-4xl font-extrabold my-2 text-[#1877f2]">
-						facebook
+						fakesbook
 					</div>
 					<div className="text-2xl font-medium">Login as a guest</div>
 					<div className="text-sm text-gray-600">
