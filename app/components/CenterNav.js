@@ -3,12 +3,16 @@
 import { usePathname } from 'next/navigation';
 import React from 'react';
 import Image from 'next/image';
-import homeIcon from '../../public/images/icons/navbar-icons/home-icon.svg';
-
-import videoIcon from '../../public/images/icons/navbar-icons/video-icon.svg';
-import marketIcon from '../../public/images/icons/navbar-icons/market-icon.svg';
-import gamingIcon from '../../public/images/icons/navbar-icons/gaming-icon.svg';
 import Link from 'next/link';
+
+import grayHome from '../../public/images/icons/navbar-icons/gray-home.svg';
+import blueHome from '../../public/images/icons/navbar-icons/blue-home.svg';
+import grayVideo from '../../public/images/icons/navbar-icons/gray-video.svg';
+import blueVideo from '../../public/images/icons/navbar-icons/blue-video.svg';
+import grayMarket from '../../public/images/icons/navbar-icons/gray-market.svg';
+import blueMarket from '../../public/images/icons/navbar-icons/blue-market.svg';
+import grayGaming from '../../public/images/icons/navbar-icons/gray-gaming.svg';
+import blueGaming from '../../public/images/icons/navbar-icons/blue-gaming.svg';
 
 const CenterNav = () => {
 	const pathname = usePathname();
@@ -22,7 +26,11 @@ const CenterNav = () => {
 						? 'h-full w-[100px] mx-auto my-auto relative flex items-center justify-center border-b-2 border-blue-700'
 						: 'h-full w-[100px] mx-auto my-auto relative flex items-center justify-center'
 				}`}>
-				<Image src={homeIcon} alt="home icon" width={22} height={22} />
+				{pathname === '/' ? (
+					<Image src={blueHome} alt="home icon" width={22} height={22} />
+				) : (
+					<Image src={grayHome} alt="home icon" width={22} height={22} />
+				)}
 			</Link>
 			<Link
 				href="/video"
@@ -31,7 +39,11 @@ const CenterNav = () => {
 						? 'h-full w-[100px] mx-auto my-auto relative flex items-center justify-center border-b-2 border-blue-700'
 						: 'h-full w-[100px] mx-auto my-auto relative flex items-center justify-center'
 				}`}>
-				<Image src={videoIcon} alt="video icon" width={22} height={22} />
+				{pathname === '/video' ? (
+					<Image src={blueVideo} alt="home icon" width={22} height={22} />
+				) : (
+					<Image src={grayVideo} alt="home icon" width={22} height={22} />
+				)}
 			</Link>
 			<Link
 				href="/marketplace"
@@ -40,7 +52,11 @@ const CenterNav = () => {
 						? 'h-full w-[100px] mx-auto my-auto relative flex items-center justify-center border-b-2 border-blue-700'
 						: 'h-full w-[100px] mx-auto my-auto relative flex items-center justify-center'
 				}`}>
-				<Image src={marketIcon} alt="market icon" width={22} height={22} />
+				{pathname === '/marketplace' ? (
+					<Image src={blueMarket} alt="home icon" width={22} height={22} />
+				) : (
+					<Image src={grayMarket} alt="home icon" width={22} height={22} />
+				)}{' '}
 			</Link>
 			<Link
 				href="/games"
@@ -49,7 +65,11 @@ const CenterNav = () => {
 						? 'h-full w-[100px] mx-auto my-auto relative flex items-center justify-center border-b-2 border-blue-700'
 						: 'h-full w-[100px] mx-auto my-auto relative flex items-center justify-center'
 				}`}>
-				<Image src={gamingIcon} alt="gaming icon" width={22} height={22} />
+				{pathname === '/games' ? (
+					<Image src={blueGaming} alt="home icon" width={22} height={22} />
+				) : (
+					<Image src={grayGaming} alt="home icon" width={22} height={22} />
+				)}{' '}
 			</Link>
 		</div>
 	);
