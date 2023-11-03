@@ -5,7 +5,7 @@ import Link from 'next/link';
 import guestImage from '../../../public/images/post-card-images/card-image5.jpg';
 import plusIcon from '../../../public/images/icons/plus-icon.svg';
 
-const Login = () => {
+const Page = () => {
 	return (
 		<section className="flex mx-auto justify-between max-w-[980px] h-screen">
 			<form className="my-auto flex flex-col gap-6">
@@ -69,4 +69,4 @@ const Login = () => {
 	);
 };
 
-export default Login;
+export default Page;

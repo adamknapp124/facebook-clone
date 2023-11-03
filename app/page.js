@@ -1,14 +1,11 @@
 import Navbar from './components/Navbar';
-import Homepage from './(pages)/homepage/Homepage';
-import Login from './(pages)/users/Login';
+import Homepage from './(pages)/home/page';
 
 export default function Home() {
 	return (
 		<>
 			<div>
-				{/* <Navbar /> */}
-				<Login />
-				{/* <Homepage /> */}
+				<Homepage />
 			</div>
 		</>
 	);
