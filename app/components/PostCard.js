@@ -18,9 +18,9 @@ import sendIcon from '../../public/images/icons/post-icons/send-icon.svg';
 const PostCard = () => {
 	return (
 		<div className="rounded-b-md">
-			<div className="p-4 mx-auto w-[500px] shadow-md bg-white rounded-t-md flex flex-col gap-5">
-				<div className="flex gap-3 justify-between">
-					<div className="flex gap-2">
+			<div className="p-4 shadow-md bg-white rounded-t-md flex flex-col gap-5">
+				<div className="flex gap-3 w-full justify-between">
+					<div className="w-full flex gap-2">
 						<Image
 							src={channelIcon}
 							alt=""
@@ -50,10 +50,10 @@ const PostCard = () => {
 					After two days it is finally done! Lets test this beast
 				</div>
 			</div>
-			<div className="mx-auto w-[500px]">
-				<Image src={postCard1} alt="" className="w-full h-auto" />
+			<div className="mx-auto w-full">
+				<Image src={postCard1} alt="" className="" />
 			</div>
-			<div className="p-3 w-[500px] mx-auto flex flex-col gap-1 justify-between bg-white rounded-b-md shadow-md">
+			<div className="p-3 w-full mx-auto flex flex-col gap-1 justify-between bg-white rounded-b-md shadow-md">
 				<div className="flex justify-between">
 					<div className="flex gap-1">
 						<Image src={likeIcon} alt="" width={18} height={18} className="" />

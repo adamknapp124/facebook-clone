@@ -19,7 +19,7 @@ const Page = () => {
 					</div>
 				</div>
 				<div className="flex gap-5">
-					<div className="w-[160px] h-[200px] border-2 rounded-lg hover:shadow-lg transition-all justify-between flex flex-col">
+					<div className="w-[160px] h-[200px] rounded-lg hover:shadow-lg transition-all justify-between flex flex-col">
 						<Image
 							src={guestImage}
 							alt="Picture of the author"
@@ -29,7 +29,7 @@ const Page = () => {
 							Guest Login
 						</div>
 					</div>
-					<div className="w-[160px] h-[200px] border-2 rounded-lg hover:shadow-lg transition-all justify-end flex flex-col">
+					<div className="w-[160px] h-[200px] rounded-lg hover:shadow-lg transition-all justify-end flex flex-col">
 						<div className="object-cover h-3/4 rounded-t-lg mx-auto flex justify-center">
 							<Image src={plusIcon} alt="" />
 						</div>
@@ -44,12 +44,12 @@ const Page = () => {
 					<input
 						type="text"
 						placeholder="Email or phone number"
-						className="p-3.5 border-2 rounded-lg outline-[#1877f2]"
+						className="p-3.5 rounded-lg outline-[#1877f2]"
 					/>
 					<input
 						type="password"
 						placeholder="Password"
-						className="p-3.5 border-2 rounded-lg outline-[#1877f2]"
+						className="p-3.5 rounded-lg outline-[#1877f2]"
 					/>
 					<Link
 						href="/user/create"

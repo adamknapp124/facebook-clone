@@ -17,6 +17,7 @@ const StoryCard = () => {
 		{ background: storyImage2, name: 'Lily Rodriguez', profileImage: profile2 },
 		{ background: storyImage3, name: 'Marcus Bennett', profileImage: profile3 },
 		{ background: storyImage4, name: 'Noah Anderson', profileImage: profile4 },
+		{ background: storyImage4, name: 'Noah Anderson', profileImage: profile4 },
 	];
 	return (
 		<>

@@ -11,7 +11,7 @@ import StoryCard from './StoryCard';
 const Stories = () => {
 	const [showButton, setShowButton] = useState(false);
 	return (
-		<div className="flex gap-3 w-[600px] relative">
+		<div className="flex gap-3 relative">
 			<div className="absolute inset-0 flex items-center z-10">
 				{showButton ? (
 					<div className="bg-white absolute left-3 h-[48px] w-[48px] rounded-full flex justify-center">

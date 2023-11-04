@@ -7,7 +7,6 @@ const prisma = new PrismaClient();
 export async function POST(request) {
 	const body = await request.json();
 	const { email, password } = body.data;
-	console.log(body.data);
 
 	if (!email || !password) {
 		return new NextResponse('Missing email or password', { status: 400 });
