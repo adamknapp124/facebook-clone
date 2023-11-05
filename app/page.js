@@ -37,14 +37,21 @@ export default function Home() {
 
 	const { data: session, status } = useSession();
 	console.log(session);
+
 	return (
 		<div className="flex flex-col">
 			<div>
 				<Navbar />
 			</div>
 			<div className="flex flex-row flex-shrink justify-between max-w-[1464px] mx-auto mt-16">
-				{twoColumn ? <SideNav /> : null}
-				<Feed />
+				{twoColumn ? (
+					<div className="">
+						<SideNav />
+					</div>
+				) : null}
+				<div className="flex-1 overflow-y-auto">
+					<Feed />
+				</div>
 				{oneColumn ? null : <ContactPanel />}
 			</div>
 		</div>

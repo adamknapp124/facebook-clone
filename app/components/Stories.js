@@ -9,9 +9,9 @@ import leftArrow from '../../public/images/icons/story-card-icons/left-arrow.svg
 import StoryCard from './StoryCard';
 
 const Stories = () => {
-	const [showButton, setShowButton] = useState(false);
+	const [showButton, setShowButton] = useState(true);
 	return (
-		<div className="flex relative overflow-hidden">
+		<div className="flex relative border-2 overflow-hidden">
 			<div className="absolute inset-0 flex items-center z-10">
 				{showButton ? (
 					<div className="bg-white absolute left-3 h-[48px] w-[48px] rounded-full flex justify-center">

@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { useSession } from 'next-auth/react';
 
 import React from 'react';
@@ -31,6 +32,7 @@ import raybanmetaicon from '../../public/images/icons/sidenav-icons/raybanmeta-i
 import adactivityicon from '../../public/images/icons/sidenav-icons/adactivity-icon.svg';
 
 const SideNav = () => {
+	const [showMore, setShowMore] = useState(false);
 	const homeFillData = [
 		{ icon: friendsicon, title: 'Friends', link: '/' },
 		{ icon: memoriesicon, title: 'Memories', link: '/' },
@@ -59,28 +61,52 @@ const SideNav = () => {
 	const { data: session, status } = useSession();
 	console.log(session);
 
+	const displayedData = showMore ? homeFillData : homeFillData.slice(0, 7);
+	const handleToggleShowMore = () => {
+		setShowMore(!showMore);
+	};
 	return (
-		<div className="min-w-[1920px]:d-block sticky xxxl:pl-2 w-[300px] pt-4 hover:overflow-y-scroll scroll bg-gray-100">
+		<div className="min-w-[1920px]:d-block xxxl:pl-2 w-[300px] pt-4 hover:overflow-y-scroll scroll bg-gray-100 fixed left-[550px]">
 			<ul className="flex flex-col">
-				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm font-medium">
+				<li className="transition-transform transform flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm">
 					<Image
 						src={profileicon}
 						alt="profile image"
-						width={24}
-						height={24}
+						width={34}
+						height={34}
 						className="rounded-full"
 					/>
-					<div className="font-medium">{session?.user.name}</div>
+					<div className=" text-base font-semibold cursor-pointer">
+						{session?.user.name}
+					</div>
 				</li>
-				{homeFillData.map((link, index) => (
-					<li
-						key={index}
-						className="flex hover:bg-gray-200 rounded-l-md pl-1.5 pt-2.5 pb-2.5 gap-3 text-sm font-medium">
-						<Image src={link.icon} alt={link.title} width={24} height={24} />
-						<div className="font-medium">{link.title}</div>
-					</li>
+				{displayedData.map((link, index) => (
+					<button key={index}>
+						<li className="flex hover:bg-gray-200 rounded-l-md pl-1.5 pt-2.5 pb-2.5 gap-3 text-sm font-bold">
+							<Image src={link.icon} alt={link.title} width={24} height={24} />
+							<div className="text-base font-semibold cursor-pointer">
+								{link.title}
+							</div>
+						</li>
+					</button>
 				))}
 			</ul>
+			{!showMore && (
+				<div className="flex justify-center py-2">
+					<button
+						onClick={handleToggleShowMore}
+						className="pl-2 w-full text-left cursor-pointer text-base font-semibold">
+						See More
+					</button>
+				</div>
+			)}
+			{showMore ? (
+				<button
+					onClick={handleToggleShowMore}
+					className="pl-2 w-full text-left cursor-pointer text-base font-semibold">
+					See Less
+				</button>
+			) : null}
 		</div>
 	);
 };
