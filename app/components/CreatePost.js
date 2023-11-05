@@ -27,7 +27,7 @@ const CreatePost = () => {
 					<input
 						type="text"
 						placeholder="What's on your mind, User?"
-						className=" flex bg-transparent text-md w-full placeholder-gray-500"
+						className=" flex bg-transparent border-0 focus:ring-0 text-md w-full placeholder-gray-500"
 					/>
 				</div>
 			</div>

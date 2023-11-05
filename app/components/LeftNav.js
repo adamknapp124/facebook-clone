@@ -25,7 +25,7 @@ const LeftNav = () => {
 				<input
 					type="text"
 					placeholder="Search Fakesbook"
-					className="bg-transparent text-sm outline-none"
+					className="bg-transparent border-0 focus:ring-0 outline-none text-sm border-none out"
 				/>
 			</div>
 		</div>

@@ -135,3 +135,21 @@ table {
 .red-fill {
 	fill: red;
 }
+
+.tooltip {
+	position: absolute;
+	bottom: -10px; /* Adjust this value for the desired distance between link and tooltip */
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #000;
+	color: #fff;
+	padding: 2px 4px;
+	border-radius: 2px;
+	opacity: 0;
+	transition: opacity 0.3s;
+	pointer-events: none;
+}
+
+.link.active:hover .tooltip {
+	opacity: 1;
+}
