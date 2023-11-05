@@ -36,12 +36,13 @@ export default function Home() {
 	}, [twoColumn]);
 
 	const { data: session, status } = useSession();
+	console.log(session);
 	return (
 		<div className="flex flex-col">
 			<div>
 				<Navbar />
 			</div>
-			<div className="flex flex-row flex-shrink justify-between max-w-[1464px] mx-auto pt-16">
+			<div className="flex flex-row flex-shrink justify-between max-w-[1464px] mx-auto mt-16">
 				{twoColumn ? <SideNav /> : null}
 				<Feed />
 				{oneColumn ? null : <ContactPanel />}

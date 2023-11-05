@@ -24,7 +24,7 @@ const StoryCard = () => {
 			{storiesArray.map((story, index) => (
 				<div
 					key={index}
-					className="p-3 overflow-hidden shadow-md rounded-lg flex justify-center w-[141px] h-[250px] relative group">
+					className="p-3 overflow-hidden shadow-md rounded-lg flex justify-center min-w-[141px] h-[250px] relative group mr-2">
 					<Image
 						src={story.background}
 						alt="Story Image"

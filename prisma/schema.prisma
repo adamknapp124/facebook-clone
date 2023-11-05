@@ -44,4 +44,15 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+  posts Post[]
+}
+model Post {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  content   String?
+  image     String?
+  published Boolean @default(false)
+  publishedAt DateTime
+  author    User?   @relation(fields: [authorId], references: [id])
+  authorId  String  @db.ObjectId
 }

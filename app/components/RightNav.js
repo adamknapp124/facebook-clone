@@ -31,7 +31,7 @@ const RightNav = () => {
 					height={22}
 				/>
 			</div>
-			<div className="bg-gray-200 h-10 w-10 flex justify-center rounded-full">
+			<div className="bg-gray-200 h-10 w-10 flex justify-center rounded-full dropdown">
 				<button onClick={() => signOut()}>
 					<Image
 						src={profileIcon}

@@ -1,3 +1,7 @@
+'use client';
+
+import { useSession } from 'next-auth/react';
+
 import React from 'react';
 import Image from 'next/image';
 
@@ -52,6 +56,8 @@ const SideNav = () => {
 		{ icon: raybanmetaicon, title: 'Ray-Ban Meta', link: '/' },
 		{ icon: adactivityicon, title: 'Recent ad activity', link: '/' },
 	];
+	const { data: session, status } = useSession();
+	console.log(session);
 
 	return (
 		<div className="min-w-[1920px]:d-block sticky xxxl:pl-2 w-[300px] pt-4 hover:overflow-y-scroll scroll bg-gray-100">
@@ -64,7 +70,7 @@ const SideNav = () => {
 						height={24}
 						className="rounded-full"
 					/>
-					<div className="font-medium">Adam Knapp</div>
+					<div className="font-medium">{session?.user.name}</div>
 				</li>
 				{homeFillData.map((link, index) => (
 					<li

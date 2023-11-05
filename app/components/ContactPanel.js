@@ -16,186 +16,48 @@ const ContactPanel = () => {
 					<Image src={menuIcon} alt="" width={14} height={14} />
 				</div>
 			</div>
-			<ul className="flex flex-col gap-1">
-				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm font-medium">
+			<ul className="flex flex-col gap-2">
+				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-md font-medium">
 					<Image
 						src={profileIcon}
 						alt="profile image"
-						width={30}
-						height={30}
+						width={35}
+						height={35}
 						className="rounded-full"
 					/>
-					<div className="font-medium my-auto">Adam Knapp</div>
+					<div className="font-medium font-semibold my-auto">Adam Knapp</div>
 				</li>
-				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm font-medium">
+				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-md font-medium">
 					<Image
 						src={profileIcon}
 						alt="profile image"
-						width={30}
-						height={30}
+						width={35}
+						height={35}
 						className="rounded-full"
 					/>
-					<div className="font-medium my-auto">Adam Knapp</div>
+					<div className="font-medium font-semibold my-auto">Adam Knapp</div>
 				</li>
-				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm font-medium">
+				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-md font-medium">
 					<Image
 						src={profileIcon}
 						alt="profile image"
-						width={30}
-						height={30}
+						width={35}
+						height={35}
 						className="rounded-full"
 					/>
-					<div className="font-medium my-auto">Adam Knapp</div>
+					<div className="font-medium font-semibold my-auto">Adam Knapp</div>
 				</li>
-				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm font-medium">
+				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-md font-medium">
 					<Image
 						src={profileIcon}
 						alt="profile image"
-						width={30}
-						height={30}
+						width={35}
+						height={35}
 						className="rounded-full"
 					/>
-					<div className="font-medium my-auto">Adam Knapp</div>
-				</li>
-				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm font-medium">
-					<Image
-						src={profileIcon}
-						alt="profile image"
-						width={30}
-						height={30}
-						className="rounded-full"
-					/>
-					<div className="font-medium my-auto">Adam Knapp</div>
-				</li>
-				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm font-medium">
-					<Image
-						src={profileIcon}
-						alt="profile image"
-						width={30}
-						height={30}
-						className="rounded-full"
-					/>
-					<div className="font-medium my-auto">Adam Knapp</div>
-				</li>
-				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm font-medium">
-					<Image
-						src={profileIcon}
-						alt="profile image"
-						width={30}
-						height={30}
-						className="rounded-full"
-					/>
-					<div className="font-medium my-auto">Adam Knapp</div>
-				</li>
-				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm font-medium">
-					<Image
-						src={profileIcon}
-						alt="profile image"
-						width={30}
-						height={30}
-						className="rounded-full"
-					/>
-					<div className="font-medium my-auto">Adam Knapp</div>
-				</li>
-				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm font-medium">
-					<Image
-						src={profileIcon}
-						alt="profile image"
-						width={30}
-						height={30}
-						className="rounded-full"
-					/>
-					<div className="font-medium my-auto">Adam Knapp</div>
-				</li>
-				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm font-medium">
-					<Image
-						src={profileIcon}
-						alt="profile image"
-						width={30}
-						height={30}
-						className="rounded-full"
-					/>
-					<div className="font-medium my-auto">Adam Knapp</div>
-				</li>
-				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm font-medium">
-					<Image
-						src={profileIcon}
-						alt="profile image"
-						width={30}
-						height={30}
-						className="rounded-full"
-					/>
-					<div className="font-medium my-auto">Adam Knapp</div>
-				</li>
-				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm font-medium">
-					<Image
-						src={profileIcon}
-						alt="profile image"
-						width={30}
-						height={30}
-						className="rounded-full"
-					/>
-					<div className="font-medium my-auto">Adam Knapp</div>
-				</li>
-				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm font-medium">
-					<Image
-						src={profileIcon}
-						alt="profile image"
-						width={30}
-						height={30}
-						className="rounded-full"
-					/>
-					<div className="font-medium my-auto">Adam Knapp</div>
-				</li>
-				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm font-medium">
-					<Image
-						src={profileIcon}
-						alt="profile image"
-						width={30}
-						height={30}
-						className="rounded-full"
-					/>
-					<div className="font-medium my-auto">Adam Knapp</div>
-				</li>
-				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm font-medium">
-					<Image
-						src={profileIcon}
-						alt="profile image"
-						width={30}
-						height={30}
-						className="rounded-full"
-					/>
-					<div className="font-medium my-auto">Adam Knapp</div>
-				</li>
-				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm font-medium">
-					<Image
-						src={profileIcon}
-						alt="profile image"
-						width={30}
-						height={30}
-						className="rounded-full"
-					/>
-					<div className="font-medium my-auto">Adam Knapp</div>
-				</li>
-				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm font-medium">
-					<Image
-						src={profileIcon}
-						alt="profile image"
-						width={30}
-						height={30}
-						className="rounded-full"
-					/>
-					<div className="font-medium my-auto">Adam Knapp</div>
-				</li>
-				<li className="flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm font-medium">
-					<Image
-						src={profileIcon}
-						alt="profile image"
-						width={30}
-						height={30}
-						className="rounded-full"
-					/>
-					<div className="font-medium my-auto">Adam Knapp</div>
+					<div className="font-medium font-semibold my-auto">
+						Steven Gillespie
+					</div>
 				</li>
 			</ul>
 		</div>
