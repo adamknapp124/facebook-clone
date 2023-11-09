@@ -46,7 +46,6 @@ export default function Home() {
 	return (
 		<div className="flex flex-col">
 			<Navbar />
-
 			<div className="flex flex-row mt-16 mx-auto w-screen xxxl:w-3/4 xs:justify-center xxxl:justify-between">
 				{twoColumn ? <SideNav /> : null}
 				<Feed />
