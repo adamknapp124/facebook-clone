@@ -17,33 +17,39 @@ import sendIcon from '../../public/images/icons/post-icons/send-icon.svg';
 
 const PostCard = () => {
 	return (
-		<div className="rounded-b-md">
+		<div className="rounded-b-md w-min-fit">
 			<div className="p-4 shadow-md bg-white rounded-t-md flex flex-col gap-5">
 				<div className="flex gap-3 w-full justify-between">
-					<div className="w-full flex gap-2">
-						<Image
-							src={channelIcon}
-							alt=""
-							height={35}
-							width={35}
-							className="rounded-md"
-						/>
+					<div className="w-full flex justify-between gap-2">
 						<div className="flex flex-col">
-							<div className="text-black text-sm font-medium">
-								PC Gaming and Building Enthusiasts
-							</div>
-							<div className="flex gap-1">
-								<div className="text-xs font-medium text-zinc-600">
-									KaeWen Wei ·
+							<div className="flex gap-2">
+								<Image
+									src={channelIcon}
+									alt=""
+									height={35}
+									width={35}
+									className="rounded-md"
+								/>
+								<div className="flex flex-col">
+									<div className="text-black text-sm font-medium">
+										PC Gaming and Building Enthusiasts
+									</div>
+									<div className="flex gap-1">
+										<div className="text-xs font-medium text-zinc-600">
+											KaeWen Wei ·
+										</div>
+										<div className="flex">
+											<div className="text-xs">2h ·</div>
+											<Image src={friendsIcon} alt="" width={14} height={14} />
+										</div>
+									</div>
 								</div>
-								<div className="text-xs">2h ·</div>
-								<Image src={friendsIcon} alt="" width={14} height={14} />
 							</div>
 						</div>
-					</div>
-					<div className="flex gap-5">
-						<Image src={menuIcon} alt="" width={20} height={20} />
-						<Image src={closeIcon} alt="" width={20} height={20} />
+						<div className="flex gap-3">
+							<Image src={menuIcon} alt="" width={20} height={20} />
+							<Image src={closeIcon} alt="" width={20} height={20} />
+						</div>
 					</div>
 				</div>
 				<div className="text-md">
@@ -51,7 +57,7 @@ const PostCard = () => {
 				</div>
 			</div>
 			<div className="mx-auto w-full">
-				<Image src={postCard1} alt="" className="" />
+				<Image src={postCard1} alt="" className="flex" />
 			</div>
 			<div className="p-3 w-full mx-auto flex flex-col gap-1 justify-between bg-white rounded-b-md shadow-md">
 				<div className="flex justify-between">
