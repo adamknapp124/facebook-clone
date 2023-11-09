@@ -7,7 +7,7 @@ import Navbar from '/app/components/Navbar';
 
 const Page = () => {
 	return (
-		<div className="flex flex-col">
+		<div className="flex flex-col border-2">
 			<div>
 				<Navbar />
 			</div>

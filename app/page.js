@@ -45,18 +45,11 @@ export default function Home() {
 
 	return (
 		<div className="flex flex-col">
-			<div>
-				<Navbar />
-			</div>
-			<div className="flex flex-row flex-shrink justify-between max-w-[1464px] mx-auto mt-16">
-				{twoColumn ? (
-					<div className="">
-						<SideNav />
-					</div>
-				) : null}
-				<div className="flex-1 overflow-y-auto">
-					<Feed />
-				</div>
+			<Navbar />
+
+			<div className="flex flex-row mt-16 mx-auto w-full xxxl:w-3/4 xs:justify-center md:justify-between">
+				{twoColumn ? <SideNav /> : null}
+				<Feed />
 				{oneColumn ? null : <ContactPanel />}
 			</div>
 		</div>

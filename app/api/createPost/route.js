@@ -4,18 +4,17 @@ import { NextResponse } from 'next/server';
 const prisma = new PrismaClient();
 
 export async function POST(request) {
-	const body = await request.json();
-	const { title, content, image, author, publishedAt } = body.data;
+	const content = await request.json();
+	const { body, image, author, publishedAt } = content.data;
 
-	if (!title) {
+	if (!body) {
 		return new NextResponse('Title Missing', { status: 400 });
 	}
 
 	try {
 		const newPost = await prisma.post.create({
 			data: {
-				title,
-				content,
+				body,
 				image,
 				author,
 				publishedAt,

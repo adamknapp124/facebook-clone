@@ -17,7 +17,7 @@ import blueGaming from '../../public/images/icons/navbar-icons/blue-gaming.svg';
 const CenterNav = () => {
 	const pathname = usePathname();
 	return (
-		<div className="flex absolute bottom-0 left-0 right-0 top-0 mx-auto justify-end h-full w-1/3">
+		<div className="flex absolute bottom-0 left-0 right-0 top-0 m-auto max-w-[600px]">
 			<Link
 				href="/
 				"

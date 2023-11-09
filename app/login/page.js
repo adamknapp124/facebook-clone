@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { signIn } from 'next-auth/react';
 
 import Image from 'next/image';
@@ -92,7 +93,7 @@ export default function LoginPage() {
 					<button
 						type="submit"
 						className="mx-auto rounded-lg bg px-4 py-2.5 my-2 text-lg font-semibold text-white bg-[#42b72a]">
-						Create new account
+						<Link href="/register">Create new account</Link>
 					</button>
 				</div>
 			</form>

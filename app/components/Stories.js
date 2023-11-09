@@ -28,8 +28,8 @@ const Stories = () => {
 					<Image
 						src={rightArrow}
 						alt="right arrow"
-						height={12}
-						width={12}
+						height={15}
+						width={15}
 						className="my-auto"
 					/>
 				</div>

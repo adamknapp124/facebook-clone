@@ -6,13 +6,15 @@ import PostCard from '../components/PostCard';
 
 const Feed = () => {
 	return (
-		<div className="bg-slate-100 w-[680px] flex flex-col flex-grow-1 gap-5 p-5">
+		<div className="flex flex-col overflow-hidden max-w-[680px]">
 			<Stories />
-			<CreatePost />
-			<PostCard />
-			<PostCard />
-			<PostCard />
-			<PostCard />
+			<div className="bg-slate-100 max-w-[680px] flex flex-col flex-shrink-1 gap-5 p-5">
+				<CreatePost />
+				<PostCard />
+				<PostCard />
+				<PostCard />
+				<PostCard />
+			</div>
 		</div>
 	);
 };

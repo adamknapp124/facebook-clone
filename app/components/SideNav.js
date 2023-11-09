@@ -66,7 +66,7 @@ const SideNav = () => {
 		setShowMore(!showMore);
 	};
 	return (
-		<div className="min-w-[1920px]:d-block xxxl:pl-2 w-[300px] pt-4 hover:overflow-y-scroll scroll bg-gray-100 fixed left-[550px]">
+		<div className="w-[300px] flex flex-col min-w-fit flex-nowrap flex-shrink-2 pt-4 hover:overflow-y-scroll scroll bg-gray-100 border-2">
 			<ul className="flex flex-col">
 				<li className="transition-transform transform flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm">
 					<Image
