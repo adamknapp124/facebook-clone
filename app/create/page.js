@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 
@@ -10,11 +11,15 @@ import photoIcon from '../../public/images/icons/sidenav-icons/video-icon.svg';
 import smileyIcon from '../../public/images/icons/sidenav-icons/video-icon.svg';
 
 const CreatePost = () => {
+	// const currentDate = new Date();
+	const { data: session, status } = useSession();
 	const [toggled, setToggled] = useState(false);
 	const router = useRouter();
 	const [data, setData] = useState({
 		body: '',
 		image: '',
+		// publishedAt: currentDate,
+		authorId: '123',
 	});
 
 	function handleToggleUploader() {
@@ -23,6 +28,7 @@ const CreatePost = () => {
 
 	const savePost = async (e) => {
 		e.preventDefault();
+		console.log(session.user.id);
 		const response = await fetch('/api/createPost', {
 			method: 'POST',
 			headers: {
@@ -30,7 +36,6 @@ const CreatePost = () => {
 			},
 			body: JSON.stringify({ data }),
 		});
-		console.log(data);
 		if (!response.ok) {
 			// Handle non-successful response (e.g., server error, bad request)
 			throw new Error(`HTTP error! Status: ${response.status}`);
@@ -38,11 +43,11 @@ const CreatePost = () => {
 
 		const postData = await response.json();
 		console.log(postData);
-		router.push('/');
+		// router.push('/');
 	};
 
 	return (
-		<form onSubmit={savePost}>
+		<form onSubmit={savePost} className="pt-4">
 			<div className="mx-auto p-3 flex flex-col w-full gap-2 shadow-md bg-white rounded-lg">
 				<div className=" flex justify-center my-auto gap-3">
 					<div className="my-auto">

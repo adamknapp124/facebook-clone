@@ -20,6 +20,7 @@ export const authOptions = {
 				password: { label: 'Password', type: 'password' },
 			},
 			async authorize(credentials) {
+				console.log('checking authorization');
 				// check to see if email and password is valid
 				if (!credentials.email || !credentials.password) {
 					return null;
@@ -31,21 +32,28 @@ export const authOptions = {
 						email: credentials.email,
 					},
 				});
-				if (!user) {
+
+				if (
+					!user ||
+					!(await bcrypt.compare(credentials.password, user.password))
+				) {
 					return null;
 				}
 
 				// check to see if the password is valid
-				const passwordsMatch = await bcrypt.compare(
-					credentials.password,
-					user.password
-				);
+				// const passwordsMatch = await bcrypt.compare(
+				// 	credentials.password,
+				// 	user.password
+				// );
 
-				if (!passwordsMatch) {
-					return null;
-				}
+				// if (!passwordsMatch) {
+				// 	return null;
+				// }
 
 				// return user object if everything is valid
+				console.log('this is the user', user);
+
+				console.log('User ID at login:', user.sub);
 				return user;
 			},
 		}),
@@ -53,10 +61,22 @@ export const authOptions = {
 	callbacks: {
 		async jwt({ token, user, session }) {
 			console.log('jwt callback', { token, user, session });
+			// Use 'sub' field as user ID
+			if (user && user.sub) {
+				token.id = user.sub;
+			}
+
 			return token;
 		},
 		async session({ session, token, user }) {
 			console.log('session callback:', { session, token, user });
+
+			// Use 'sub' field from token as the user ID
+			if (token && token.sub) {
+				session.user.id = token.sub;
+			}
+
+			console.log('user id of logged in user:', session.user.id);
 			return session;
 		},
 	},

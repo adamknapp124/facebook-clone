@@ -39,19 +39,19 @@ model User {
   name          String?
   email         String?   @unique
   password      String?
-  hashedPassword String?
-  emailVerified DateTime?
   image         String?
   accounts      Account[]
   sessions      Session[]
-  posts Post[]
+  // posts Post[]
 }
 model Post {
   id        String  @id @default(auto()) @map("_id") @db.ObjectId
-  body   String?
+  // author   User   @relation(fields: [authorId], references: [id])
+  authorId String  // relation scalar field  (used in the `@relation` attribute above)
+  body   String
   image     String?
-  published Boolean @default(false)
-  publishedAt DateTime
-  author    User?   @relation(fields: [authorId], references: [id])
-  authorId  String  @db.ObjectId
+  // published Boolean @default(false)
+  // publishedAt DateTime
+  // author    String
+  // authorId  String  @db.ObjectId
 }

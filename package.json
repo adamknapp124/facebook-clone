@@ -22,6 +22,7 @@
     "ws": "^8.14.2"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
     "@types/node": "20.8.10",
     "@types/react": "18.2.34",
     "autoprefixer": "^10",

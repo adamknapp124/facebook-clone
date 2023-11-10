@@ -28,16 +28,16 @@ const StoryCard = () => {
 					<Image
 						src={story.background}
 						alt="Story Image"
-						layout="fill"
-						objectFit="cover"
+						fill
+						style={{ objectFit: 'cover' }}
 					/>
 					<div className="h-full w-full my-auto relative flex flex-col">
 						<div className="border-4 border-sky-500 h-10 w-10 absolute rounded-full">
 							<Image
 								src={story.profileImage}
 								alt=""
-								layout="fill"
-								objectFit="cover"
+								fill
+								style={{ objectFit: 'cover' }}
 								className="overflow-hidden rounded-full"
 							/>
 						</div>

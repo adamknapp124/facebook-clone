@@ -66,7 +66,7 @@ const SideNav = () => {
 		setShowMore(!showMore);
 	};
 	return (
-		<div className="w-[300px] flex flex-col min-w-fit flex-nowrap flex-shrink-2 pt-4 hover:overflow-y-scroll scroll bg-gray-100 border-2">
+		<div className="w-[300px] flex flex-col min-w-fit flex-nowrap flex-shrink-2 pt-4 hover:overflow-y-scroll scroll bg-gray-100">
 			<ul className="flex flex-col">
 				<li className="transition-transform transform flex hover:bg-gray-200 rounded-l-md pl-2.5 pt-1.5 pb-1 gap-3 text-sm">
 					<Image
@@ -76,8 +76,8 @@ const SideNav = () => {
 						height={34}
 						className="rounded-full"
 					/>
-					<div className=" text-base font-semibold cursor-pointer">
-						{session?.user.name}
+					<div className=" text-base font-semibold cursor-pointer my-auto">
+						{session.user.name}
 					</div>
 				</li>
 				{displayedData.map((link, index) => (

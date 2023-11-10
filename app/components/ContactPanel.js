@@ -8,7 +8,7 @@ import menuIcon from '../../public/images/icons/create-post-icons/menu-icon.svg'
 
 const ContactPanel = () => {
 	return (
-		<div className="flex flex-col flex-shrink-1  min-w-fit flex-nowrap gap-3 p-6 w-[300px] h-screen bg-gray-100 border-2">
+		<div className="flex flex-col flex-shrink-1  min-w-fit flex-nowrap gap-3 p-6 w-[300px] h-screen bg-gray-100">
 			<div className="flex justify-between w-full">
 				<div className="text-sm font-semibold text-zinc-600">Contacts</div>
 				<div className="flex justify-end pr-4 gap-5">

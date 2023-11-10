@@ -19,7 +19,7 @@ export default function LoginPage() {
 
 	const loginUser = async (e) => {
 		e.preventDefault();
-		signIn('credentials', { ...data, redirect: false });
+		await signIn('credentials', { ...data, redirect: false });
 		router.push('/');
 	};
 
