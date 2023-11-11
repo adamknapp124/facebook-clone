@@ -42,16 +42,17 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
-  // posts Post[]
+  posts         Post[]   // Add this line to represent the posts created by the user
+
 }
+
 model Post {
   id        String  @id @default(auto()) @map("_id") @db.ObjectId
-  // author   User   @relation(fields: [authorId], references: [id])
-  authorId String  // relation scalar field  (used in the `@relation` attribute above)
-  body   String
+  author    User    @relation(fields: [authorId], references: [id])
+  authorId  String  @db.ObjectId
+  body      String
   image     String?
-  // published Boolean @default(false)
-  // publishedAt DateTime
-  // author    String
-  // authorId  String  @db.ObjectId
+  // Other fields related to the post
+
+  @@index([authorId], name: "authorId")
 }

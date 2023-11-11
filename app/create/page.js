@@ -18,8 +18,8 @@ const CreatePost = () => {
 	const [data, setData] = useState({
 		body: '',
 		image: '',
+		authorId: session?.user?.id,
 		// publishedAt: currentDate,
-		authorId: '123',
 	});
 
 	function handleToggleUploader() {
@@ -28,7 +28,8 @@ const CreatePost = () => {
 
 	const savePost = async (e) => {
 		e.preventDefault();
-		console.log(session.user.id);
+		console.log('session user: ', session.user);
+		console.log('users posts: ', session?.user?.posts);
 		const response = await fetch('/api/createPost', {
 			method: 'POST',
 			headers: {

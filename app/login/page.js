@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { getSession } from 'next-auth/react';
 import Link from 'next/link';
 import { signIn } from 'next-auth/react';
 
@@ -22,6 +23,19 @@ export default function LoginPage() {
 		await signIn('credentials', { ...data, redirect: false });
 		router.push('/');
 	};
+
+	// UseEffect hook to check for an existing session on component mount
+	useEffect(() => {
+		const checkSession = async () => {
+			const session = await getSession();
+			if (session) {
+				// Redirect the user to the home page if they are already authenticated
+				router.push('/');
+			}
+		};
+
+		checkSession();
+	}, [router]);
 
 	return (
 		<section className="flex mx-auto justify-between max-w-[980px] h-screen">
@@ -63,6 +77,7 @@ export default function LoginPage() {
 						name="email"
 						id="email"
 						placeholder="Email"
+						autoComplete="email"
 						required
 						value={data.email}
 						onChange={(e) => {
@@ -75,6 +90,7 @@ export default function LoginPage() {
 						name="password"
 						id="password"
 						placeholder="Password"
+						autoComplete="current-password"
 						required
 						value={data.password}
 						onChange={(e) => {

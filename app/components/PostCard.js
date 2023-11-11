@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 
+import { useSession } from 'next-auth/react';
+
 import channelIcon from '../../public/images/icons/navbar-icons/profile-image.jpg';
 import menuIcon from '../../public/images/icons/create-post-icons/menu-icon.svg';
 import closeIcon from '../../public/images/icons/create-post-icons/close-icon.svg';
@@ -16,6 +18,8 @@ import commentIcon from '../../public/images/icons/post-icons/comment-icon.svg';
 import sendIcon from '../../public/images/icons/post-icons/send-icon.svg';
 
 const PostCard = () => {
+	const { data: session, status } = useSession();
+
 	return (
 		<div className="rounded-b-md w-min-fit">
 			<div className="p-4 shadow-md bg-white rounded-t-md flex flex-col gap-5">
@@ -36,7 +40,7 @@ const PostCard = () => {
 									</div>
 									<div className="flex gap-1">
 										<div className="text-xs font-medium text-zinc-600">
-											KaeWen Wei ·
+											{session.user.posts[0].body} ·
 										</div>
 										<div className="flex">
 											<div className="text-xs">2h ·</div>
