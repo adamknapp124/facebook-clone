@@ -15,9 +15,6 @@ export default function Feed() {
 				<div className="bg-slate-100 max-w-[680px] flex flex-col flex-shrink-1 gap-5 p-1">
 					<CreatePost />
 					<PostCard />
-					<PostCard />
-					<PostCard />
-					<PostCard />
 				</div>
 			</div>
 		);
